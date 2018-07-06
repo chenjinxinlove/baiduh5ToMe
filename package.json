@@ -1,0 +1,24 @@
+{
+  "name": "baiduh5tome",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenjinxinlove/baiduh5ToMe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chenjinxinlove/baiduh5ToMe/issues"
+  },
+  "homepage": "https://github.com/chenjinxinlove/baiduh5ToMe#readme",
+  "dependencies": {
+    "download": "^7.0.0",
+    "needle": "^2.2.1",
+    "request": "^2.87.0"
+  }
+}
