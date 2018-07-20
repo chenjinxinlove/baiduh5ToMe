@@ -12,14 +12,14 @@ const BAIDU_JS =  /https\:\/\/.+js/g;
 
 
 
-// (function() {
-//     const allArr = readHtmlMergeUrl('./src/yss.html');
-//     Promise.all(allArr.forEach(arr => {
-//         downFile(arr);
-//     })).then(() => {
-//         console.log('files downloaded!')
-//     })
-// })()
+(function() {
+    const allArr = readHtmlMergeUrl('./src/club.html');
+    Promise.all(allArr.forEach(arr => {
+        downFile(arr);
+    })).then(() => {
+        console.log('files downloaded!')
+    })
+})()
 
 // 读取的在html中的文件url
 
@@ -35,33 +35,33 @@ function readHtmlMergeUrl (path) {
 
 function downFile (fileArr) {
     return new Promise((resolve, reject) => {
-        Promise.all(fileArr.map(x => download(x, 'dist'))).then(() => {
+        Promise.all(fileArr.map(x => download(x, 'clubdist'))).then(() => {
             resolve('com')
         }).catch(err => reject(err))
     })    
 }
 
-// 上传到自己的cdn  有问题
-function upload(filePath) {
-    var data = {
-        file: __dirname + filePath,
-        content_type: 'image/jpg'
-      };
+// // 上传到自己的cdn  有问题
+// function upload(filePath) {
+//     var data = {
+//         file: __dirname + filePath,
+//         content_type: 'image/jpg'
+//       };
       
-      // the callback is optional, and needle returns a `readableStream` object
-      // that triggers a 'done' event when the request/response process is complete.
-      console.log(data)
-      needle
-        .post('http://fe.neibu.koolearn.com:3000/tool/uploader', data, {timeout: 5000, multipart: true })
-        .on('readable', function() { console.log('ddd') })
-        .on('done', function(err, resp) {
-          console.log('Ready-o!', resp, err);
-        })
+//       // the callback is optional, and needle returns a `readableStream` object
+//       // that triggers a 'done' event when the request/response process is complete.
+//       console.log(data)
+//       needle
+//         .post('http://fe.neibu.koolearn.com:3000/tool/uploader', data, {timeout: 5000, multipart: true })
+//         .on('readable', function() { console.log('ddd') })
+//         .on('done', function(err, resp) {
+//           console.log('Ready-o!', resp, err);
+//         })
 
 
-}
+// }
 
-upload('/dist/0824ab18972bd4076737650077899e510eb3095e.jpg')
+// upload('/dist/0824ab18972bd4076737650077899e510eb3095e.jpg')
 
 // 替换页面中的
 
